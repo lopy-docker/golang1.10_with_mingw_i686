@@ -1,2 +1,4 @@
 # golang1.10_with_mingw_i686
 golang1.10_with_mingw_i686
+
+主要用于在linux下编译xp系统的golang程序
