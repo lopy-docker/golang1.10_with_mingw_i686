@@ -19,3 +19,4 @@ RUN mkdir /tmp -p \
     && rm -rf /tmp/* \
     && apt clean && apt autoclean \
     && rm -rf /var/cache/apt/*
+ENV PATH $GOPATH/bin:/usr/local/go/bin:$PATH
