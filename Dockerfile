@@ -16,8 +16,11 @@ RUN mkdir /tmp -p \
     && tar -zxvf go1.10.8.linux-amd64.tar.gz \
     && mv go /usr/local/ \
     && export PATH=$GOPATH/bin:/usr/local/go/bin:$PATH \
+    && mkdir /go/src/tmp -p \
     && apt install go-dep -y \
     && rm -rf /tmp/* \
     && apt clean && apt autoclean \
     && rm -rf /var/cache/apt/*
 ENV PATH $GOPATH/bin:/usr/local/go/bin:$PATH
+
+WORKDIR /go/src/tmp
